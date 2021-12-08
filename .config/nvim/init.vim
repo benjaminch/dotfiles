@@ -66,6 +66,10 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 " See hrsh7th other plugins for more great completion sources!
 
+" Search
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
 " Adds extra functionality over rust analyzer
 Plug 'simrat39/rust-tools.nvim'
 
