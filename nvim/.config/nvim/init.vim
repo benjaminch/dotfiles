@@ -62,10 +62,13 @@ set signcolumn=yes
 " 300ms of no cursor movement to trigger CursorHold
 set updatetime=300
 
-
 "--------------------------------------------------------------------------
 " Key maps
 "--------------------------------------------------------------------------
+
+" Reselect visual selection after indenting
+vnoremap < <gv
+vnoremap > >gv
 
 
 "--------------------------------------------------------------------------
@@ -74,6 +77,7 @@ set updatetime=300
 
 call plug#begin('~/.vim/plugged')
 
+source ~/.config/nvim/plugins/airline.vim
 " language server
 source ~/.config/nvim/plugins/nvim-lspconfig.vim 
 " autocompletion framework
