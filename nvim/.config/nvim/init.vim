@@ -87,7 +87,6 @@ source ~/.config/nvim/plugins/vim-vsnip.vim
 
 " Optional
 source ~/.config/nvim/plugins/popup.vim
-source ~/.config/nvim/plugins/plenary.vim
 source ~/.config/nvim/plugins/telescope.vim
 
 " Theme

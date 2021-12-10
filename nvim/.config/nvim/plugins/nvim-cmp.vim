@@ -6,18 +6,9 @@ Plug 'hrsh7th/cmp-vsnip'
 " cmp Path completion
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
-" See hrsh7th other plugins for more great completion sources!
-"
-" Set completeopt to have a better completion experience
-" :help completeopt
-" menuone: popup even when there's only one match
-" noinsert: Do not insert text until a selection is made
-" noselect: Do not select, force user to select one from the menu
-set completeopt=menuone,noinsert,noselect
 
-" Avoid showing extra messages when using completion
-set shortmess+=c
 
+function CmpSetup()
 " Setup Completion
 " See https://github.com/hrsh7th/nvim-cmp#basic-configuration
 lua <<EOF
@@ -53,3 +44,22 @@ cmp.setup({
   },
 })
 EOF
+endfunction
+
+augroup CmpSetup
+    autocmd!
+    autocmd User PlugLoaded call CmpSetup()
+    " See hrsh7th other plugins for more great completion sources!
+    "
+    " Set completeopt to have a better completion experience
+    " :help completeopt
+    " menuone: popup even when there's only one match
+    " noinsert: Do not insert text until a selection is made
+    " noselect: Do not select, force user to select one from the menu
+    set completeopt=menuone,noinsert,noselect
+
+    " Avoid showing extra messages when using completion
+    set shortmess+=c
+
+augroup end
+

@@ -1,4 +1,8 @@
 Plug 'arcticicestudio/nord-vim'
 
-autocmd User PlugLoaded ++nested colorscheme nord-vim
-set termguicolors
+augroup WhichKeySetup
+    autocmd!
+    autocmd User PlugLoaded ++nested colorscheme nord
+    set termguicolors
+augroup END
+
