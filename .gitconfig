@@ -1,5 +1,7 @@
 [push]
 	default = matching
+[pull]
+	ff = only
 [core]
 	trustctime = false
 	editor = vim
