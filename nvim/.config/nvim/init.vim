@@ -94,6 +94,8 @@ source ~/.config/nvim/plugins/fzf.vim
 source ~/.config/nvim/plugins/rust-tools.vim
 " snippet engine
 source ~/.config/nvim/plugins/vim-vsnip.vim
+" git wrapper
+source ~/.config/nvim/plugins/vim-fugitive.vim
 
 " Optional
 source ~/.config/nvim/plugins/popup.vim
