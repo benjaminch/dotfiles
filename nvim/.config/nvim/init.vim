@@ -66,6 +66,9 @@ set updatetime=300
 " Key maps
 "--------------------------------------------------------------------------
 
+" leader
+let g:mapleader = "\<Space>"
+
 " Reselect visual selection after indenting
 vnoremap < <gv
 vnoremap > >gv
