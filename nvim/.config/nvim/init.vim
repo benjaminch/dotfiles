@@ -73,6 +73,9 @@ let g:mapleader = "\<Space>"
 vnoremap < <gv
 vnoremap > >gv
 
+" allow gf command to open buffer on non-existing file
+:map <leader>gf :e <cfile><cr>
+
 
 "--------------------------------------------------------------------------
 " Plugins
