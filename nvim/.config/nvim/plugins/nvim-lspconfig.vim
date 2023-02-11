@@ -72,7 +72,7 @@ augroup LspConfigSetup
     nnoremap <silent> ga    <cmd>lua vim.lsp.buf.code_action()<CR>
     
     " Code formatting
-    nnoremap <silent> F     <cmd>lua vim.lsp.buf.formatting()<CR>
+    nnoremap <silent> F     <cmd>lua vim.lsp.buf.format { async = true }<CR>
 
     " Show diagnostic popup on cursor hover
     " autocmd CursorHold * lua vim.lsp.diagnostic.show_line_diagnostics()
