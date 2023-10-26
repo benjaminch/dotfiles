@@ -4,7 +4,7 @@
 	ff = only
 [core]
 	trustctime = false
-	editor = vim
+	editor = nvim
 	filemode = false
 [color]
 	ui = true
