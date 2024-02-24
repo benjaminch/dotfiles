@@ -108,9 +108,3 @@ eval "$(atuin init zsh)"
 
 # Make nvim available on the command line
 set -o vi
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
