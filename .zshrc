@@ -106,5 +106,8 @@ source ~/.zshenv
 # Command historyeval
 eval "$(atuin init zsh)"
 
+# Theme starship
+eval "$(starship init zsh)"
+
 # Make nvim available on the command line
 set -o vi
