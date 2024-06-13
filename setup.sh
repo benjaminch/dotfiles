@@ -36,17 +36,21 @@ brew install koekeishiya/formulae/skhd
 
 
 # TEXT EDITOR
+brew install fzf
 
 # Neovim
-cp ./.config/nvim ~/.config/nvim
-brew install neovim
-
+# cp ./.config/nvim ~/.config/nvim
+# brew install neovim
+git clone https://github.com/LazyVim/starter ~/.config/nvim
+rm -rf ~/.config/nvim/.git
 
 
 # DEV
+brew install llvm
 
 # Rust
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+rustup component add rust-analyzer
 
 # Go
 brew install go
