@@ -4,9 +4,7 @@ export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
 
 # GNU
 # Make all GNU flavor commands available, may override same-name BSD flavor commands
-# For x86 Mac
-export PATH="/usr/local/opt/coreutils/libexec/gnubin:${PATH}"
-export MANPATH="/usr/local/opt/coreutils/libexec/gnuman:${MANPATH}"
+export PATH="/opt/homebrew/opt/coreutils/libexec/gnubin:${PATH}"
 
 # JAVA
 export JAVA_HOME=${HOME}/bin/java/jdk-11.0.4+11/Contents/Home
