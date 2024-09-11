@@ -22,7 +22,6 @@ cp ./.config/atuin ~/.config/atuin
 brew install atuin
 
 
-
 # TILING MANAGER
 
 # Install Yabai (tiling manager)
@@ -33,6 +32,8 @@ brew install koekeishiya/formulae/yabai
 cp ./.config/skhd ~/.config/skhd
 brew install koekeishiya/formulae/skhd
 
+# TOOLS
+brew install bat # better cat
 
 
 # TEXT EDITOR
