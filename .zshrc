@@ -8,7 +8,7 @@ export ZSH="/Users/benjaminch/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="simple"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -70,7 +70,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting fzf)
+plugins=(
+  git
+  fzf
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,11 +106,32 @@ source $ZSH/oh-my-zsh.sh
 # Env
 source ~/.zshenv
 
+# Qovery
+source ~/.zshrc_qovery_aliases
+
 # Command historyeval
 eval "$(atuin init zsh)"
 
 # Theme starship
 eval "$(starship init zsh)"
 
+
 # Make nvim available on the command line
-set -o vi
+# set -o vi
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
+
+# Ruby
+. /opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
+
+# Google SDK
+source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+
+
+. "$HOME/.atuin/bin/env"
