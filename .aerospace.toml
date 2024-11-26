@@ -7,11 +7,7 @@
 enable-normalization-flatten-containers = false
 enable-normalization-opposite-orientation-for-nested-containers = false
 
-# Mouse follows focus when focused monitor changes
-# on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-
 [mode.main.binding]
-# See: https://nikitabobko.github.io/AeroSpace/goodness#open-a-new-window-with-applescript
 alt-enter = '''exec-and-forget osascript -e '
 tell application "Terminal"
     do script
@@ -88,3 +84,32 @@ k = 'resize height -50'
 l = 'resize width +50'
 enter = 'mode main'
 esc = 'mode main'
+
+[workspace-to-monitor-force-assignment]
+1 = ['built-in']
+2 = ['secondary','built-in']
+3 = ['secondary','built-in']
+4 = ['secondary','built-in']
+5 = ['secondary','built-in']
+6 = ['secondary','built-in']
+7 = ['secondary','built-in']
+8 = ['secondary','built-in']
+9 = ['secondary','built-in']
+0 = ['secondary','built-in']
+
+# aerospace list-apps
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = ['move-node-to-workspace 1']
+[[on-window-detected]]
+if.app-id = 'org.mozilla.firefox'
+run = ['move-node-to-workspace 2']
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+run = ['move-node-to-workspace 3']
+[[on-window-detected]]
+if.app-id = 'com.jetbrains.intellij'
+run = ['move-node-to-workspace 4']
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = ['move-node-to-workspace 5']
