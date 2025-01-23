@@ -73,6 +73,7 @@ ZSH_THEME="simple"
 plugins=(
   git
   fzf
+  z
 )
 
 source $ZSH/oh-my-zsh.sh
