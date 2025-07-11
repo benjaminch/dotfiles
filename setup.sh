@@ -36,8 +36,17 @@ brew install koekeishiya/formulae/skhd
 brew install bat # better cat
 
 
-# TEXT EDITOR
+# TEXT EDITOR (required for lazyvim)
+pip install pynvim
 brew install fzf
+brew install lynx
+npm install -g neovim
+npm install -g prettier
+npm install -g markdownlint-cli2
+npm install -g markdown-toc
+brew install tectonic
+brew install mactex
+npm install -g @mermaid-js/mermaid-cli
 
 # Neovim
 # cp ./.config/nvim ~/.config/nvim
