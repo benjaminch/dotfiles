@@ -1,0 +1,24 @@
+[helpers]
+
+[default]
+depends = []
+
+[default.files]
+aerospace = "~/.aerospace.toml"
+gitconfig = "~/.gitconfig"
+ghostty = "~/.config/ghostty"
+k9s = "~/.config/k9s"
+lazygit = "~/.config/lazygit"
+nvim = "~/.config/nvim"
+skhd = "~/.config/skhd"
+starship = "~/starship"
+tmux = "~/.tmux"
+wezterm = "~/.wezterm"
+zellij = "~/.config/zellij"
+zshenv = "~/.zshenv"
+zshrc = "~/.zshrc"
+
+[default.variables]
+
+[settings]
+default_target_type = "automatic"

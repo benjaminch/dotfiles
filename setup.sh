@@ -6,39 +6,37 @@ sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/i
 
 # TERMINAL
 
-# Install WezTerm
-cp .wezterm.lua ~/.wezterm.lua 
-brew install --cask wezterm
+# Install Ghostty
+brew install --cask ghostty
 
-# Install tmux
-cp .tmux ~/
-brew install tmux
+# Install Dotter (dotfile manager)
+brew install dotter
 
-# Make sure clipboard works in TMUX / VIM
-brew install reattach-to-user-namespace
+# Install zellij
+brew install zellij
 
 # Install better command history (atuin)
-cp ./.config/atuin ~/.config/atuin
 brew install atuin
-
 
 # TILING MANAGER
 
-# Install Yabai (tiling manager)
-cp ./.config/yabai ~/.config/yabai
-brew install koekeishiya/formulae/yabai
+# Install Aerospace (tiling manager)
+brew install --cask nikitabobko/tap/aerospace
 
 # Install skhd (keyboard shortcut manager)
-cp ./.config/skhd ~/.config/skhd
 brew install koekeishiya/formulae/skhd
 
 # TOOLS
-brew install bat # better cat
-
+brew install bat     # better cat
+brew install fzf     # files search
+brew install ripgrep # better grep
+brew install dust    # better du
+brew install fd      # better find
+brew install broot   # better tree
+brew install zoxide  # better cd
 
 # TEXT EDITOR (required for lazyvim)
 pip install pynvim
-brew install fzf
 brew install lynx
 npm install -g neovim
 npm install -g prettier
@@ -54,7 +52,6 @@ npm install -g @mermaid-js/mermaid-cli
 git clone https://github.com/LazyVim/starter ~/.config/nvim
 rm -rf ~/.config/nvim/.git
 
-
 # DEV
 brew install llvm
 
@@ -64,8 +61,6 @@ rustup component add rust-analyzer
 
 # Go
 brew install go
-
-
 
 # OPS
 
@@ -80,7 +75,6 @@ brew install hashicorp/tap/terraform
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/darwin/arm64/kubectl"
 
 # Install Kubernetes management tool (k9s)
-cp ./.config/k9s ~/.config/k9s
 brew install derailed/k9s/k9s
 
 # Install kubectl extensions (kubectl view allocation)

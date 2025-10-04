@@ -7,3 +7,8 @@ foo.*
 *.log
 data
 .DS_Store
+
+# Dotter
+.dotter/cache
+.dotter/local.toml
+

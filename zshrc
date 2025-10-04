@@ -136,3 +136,5 @@ source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
 
 
 . "$HOME/.atuin/bin/env"
+
+source /Users/benjaminch/.config/broot/launcher/bash/br
