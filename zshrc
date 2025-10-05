@@ -126,10 +126,6 @@ if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 
-# Ruby
-. /opt/homebrew/opt/asdf/etc/bash_completion.d/asdf.bash
-. /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # Google SDK
 source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
 source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
