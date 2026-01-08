@@ -28,5 +28,6 @@ wezterm = "/Users/benjaminch/.wezterm"
 "zellij/config.kdl" = "/Users/benjaminch/.config/zellij/config.kdl"
 zshenv = "/Users/benjaminch/.zshenv"
 zshrc = "/Users/benjaminch/.zshrc"
+zshrc_aliases = "/Users/benjaminch/.zshrc_aliases"
 
 [templates]

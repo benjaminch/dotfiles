@@ -17,6 +17,7 @@ wezterm = "~/.wezterm"
 zellij = "~/.config/zellij"
 zshenv = "~/.zshenv"
 zshrc = "~/.zshrc"
+zshrc_aliases = "~/.zshrc_aliases"
 
 [default.variables]
 

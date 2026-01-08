@@ -107,6 +107,9 @@ source $ZSH/oh-my-zsh.sh
 # Env
 source ~/.zshenv
 
+# Global aliases
+source ~/.zshrc_aliases
+
 # Qovery
 source ~/.zshrc_qovery_aliases
 
