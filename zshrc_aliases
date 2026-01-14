@@ -1,4 +1,4 @@
-alias cd='z'
+# alias cd='zoxide'
 alias ls='eza'
 alias cat='bat'
 alias grep='rg'

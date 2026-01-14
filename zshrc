@@ -73,10 +73,13 @@ ZSH_THEME="simple"
 plugins=(
   git
   fzf
-  z
+  zoxide
 )
 
 source $ZSH/oh-my-zsh.sh
+
+# Initialize zoxide without aliasing cd
+eval "$(zoxide init zsh)"
 
 # User configuration
 
