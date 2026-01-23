@@ -1,4 +1,12 @@
-# alias cd='zoxide'
+# Zoxide aliases
+# z <path>  - Jump to a directory (fuzzy match)
+# zi        - Interactive directory selection with fzf
+# za <path> - Add a directory to zoxide database
+# zq <path> - Query zoxide database
+# zr <path> - Remove a directory from zoxide database
+alias cd='z'  # Make cd use zoxide for smarter directory jumping
+
+# Modern CLI replacements
 alias ls='eza'
 alias cat='bat'
 alias grep='rg'

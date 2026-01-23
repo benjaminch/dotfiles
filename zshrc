@@ -77,8 +77,10 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# Initialize zoxide without aliasing cd
-eval "$(zoxide init zsh)"
+# Initialize zoxide
+# --cmd z: Use 'z' command instead of default 'cd'
+# This gives you: z <path>, zi (interactive), za (add), zq (query), zr (remove)
+eval "$(zoxide init zsh --cmd z)"
 
 # User configuration
 
