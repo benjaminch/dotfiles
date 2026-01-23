@@ -5,13 +5,20 @@ $directory\
 $git_branch\
 $git_state\
 $git_status\
+$git_metrics\
+$rust\
+$golang\
+$python\
+$nodejs\
 $cmd_duration\
 $line_break\
-$python\
 $character"""
 
 [directory]
 style = "blue"
+truncation_length = 3
+truncate_to_repo = true
+truncation_symbol = "…/"
 
 [character]
 success_symbol = "[❯](purple)"
@@ -37,10 +44,33 @@ stashed = "≡"
 format = '\([$state( $progress_current/$progress_total)]($style)\) '
 style = "bright-black"
 
+[git_metrics]
+disabled = false
+added_style = "bold green"
+deleted_style = "bold red"
+format = '([+$added]($added_style) )([-$deleted]($deleted_style) )'
+
 [cmd_duration]
+min_time = 500
 format = "[$duration]($style) "
 style = "yellow"
 
 [python]
 format = "[$virtualenv]($style) "
 style = "bright-black"
+
+[rust]
+format = "[$symbol$version]($style) "
+style = "bold red"
+symbol = "🦀 "
+
+[golang]
+format = "[$symbol$version]($style) "
+style = "bold cyan"
+symbol = "🐹 "
+
+[nodejs]
+format = "[$symbol$version]($style) "
+style = "bold green"
+symbol = "⬢ "
+

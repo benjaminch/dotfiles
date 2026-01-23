@@ -9,6 +9,6 @@ data
 .DS_Store
 
 # Dotter
-.dotter/cache
+.dotter/cache.toml
 .dotter/local.toml
 

@@ -1,31 +1,136 @@
+# User info - configure with: git config --global user.name "Your Name"
+# [user]
+# 	name = Your Name
+# 	email = your.email@example.com
+
+[core]
+	editor = nvim
+	trustctime = false
+	filemode = false
+	# Global gitignore for OS-specific files
+	excludesfile = ~/.gitignore_global
+	# Better diffs for moved/renamed files
+	renames = copies
+
+[color]
+	ui = auto
+	branch = auto
+	diff = auto
+	status = auto
+
+[init]
+	defaultBranch = main
+
 [push]
-	default = matching
+	default = simple
+	# Push tags automatically
+	followTags = true
+	# Refuse to push if upstream branch name differs
+	autoSetupRemote = true
+
 [pull]
 	ff = only
-[core]
-	trustctime = false
-	editor = nvim
-	filemode = false
-[color]
-	ui = true
-[credential]
-	helper = cache --timeout=3600
+	# Automatically stash and reapply when pulling
+	rebase = true
+
+[fetch]
+	# Remove remote-tracking branches that no longer exist on remote
+	prune = true
+	# Fetch all tags
+	pruneTags = true
+
+[rebase]
+	# Automatically stash and reapply when rebasing
+	autoStash = true
+	# Update HEAD to new base commit
+	updateRefs = true
+
 [merge]
 	tool = vimdiff
-  conflictstyle = diff3
+	conflictstyle = diff3
+	# Include summaries of merged commits in merge commit messages
+	log = true
+
 [mergetool]
 	keeptemporaries = false
 	keepbackups = false
 	prompt = false
 	trustexitcode = false
+
+[diff]
+	# Better algorithm for diffs
+	algorithm = histogram
+	# Show submodule changes
+	submodule = log
+	# Detect renames and copies
+	renames = copies
+	# Use better diff for word-level changes
+	colorMoved = default
+
+[credential]
+	helper = cache --timeout=3600
+
+[help]
+	# Automatically correct and execute mistyped commands
+	autocorrect = 10
+
 [alias]
-	last = log -1 --stat
-	cp = cherry-pick
-	co = checkout
-	cl = clone
-	ci = commit
+	# Status
 	st = status -sb
+	s = status -s
+	
+	# Branch
 	br = branch
-	unstage = reset HEAD --
+	branches = branch -a
+	
+	# Checkout
+	co = checkout
+	cob = checkout -b
+	
+	# Commit
+	ci = commit
+	cm = commit -m
+	ca = commit --amend
+	can = commit --amend --no-edit
+	
+	# Clone
+	cl = clone
+	
+	# Cherry-pick
+	cp = cherry-pick
+	
+	# Add
+	a = add
+	aa = add --all
+	
+	# Diff
+	d = diff
 	dc = diff --cached
+	ds = diff --staged
+	
+	# Log
+	last = log -1 --stat
 	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %Cblue<%an>%Creset' --abbrev-commit --date=relative --all
+	l = log --oneline --decorate --graph
+	la = log --oneline --decorate --graph --all
+	lstat = log --stat --abbrev-commit
+	
+	# Reset
+	unstage = reset HEAD --
+	undo = reset --soft HEAD^
+	
+	# Remote
+	remotes = remote -v
+	
+	# Stash
+	sl = stash list
+	sa = stash apply
+	ss = stash save
+	
+	# Pull/Push
+	pl = pull
+	ps = push
+	pf = push --force-with-lease
+	
+	# Cleanup
+	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 git branch -d"

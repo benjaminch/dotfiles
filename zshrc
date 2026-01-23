@@ -108,36 +108,32 @@ eval "$(zoxide init zsh --cmd z)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# Env
-source ~/.zshenv
-
 # Global aliases
 source ~/.zshrc_aliases
 
-# Qovery
-source ~/.zshrc_qovery_aliases
+# Qovery aliases (private, not in dotfiles)
+if [ -f ~/.zshrc_qovery_aliases ]; then
+  source ~/.zshrc_qovery_aliases
+fi
 
-# Command historyeval
+# Command history with atuin
 eval "$(atuin init zsh)"
 
 # Theme starship
 eval "$(starship init zsh)"
 
+# Google Cloud SDK
+if [ -f "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc" ]; then
+  source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
+  source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
+fi
 
-# Make nvim available on the command line
-# set -o vi
+# Atuin env
+if [ -f "$HOME/.atuin/bin/env" ]; then
+  . "$HOME/.atuin/bin/env"
+fi
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/benjaminch/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
-
-# Google SDK
-source "$(brew --prefix)/share/google-cloud-sdk/path.zsh.inc"
-source "$(brew --prefix)/share/google-cloud-sdk/completion.zsh.inc"
-
-
-. "$HOME/.atuin/bin/env"
-
-source /Users/benjaminch/.config/broot/launcher/bash/br
+# Broot launcher
+if [ -f "$HOME/.config/broot/launcher/bash/br" ]; then
+  source "$HOME/.config/broot/launcher/bash/br"
+fi
