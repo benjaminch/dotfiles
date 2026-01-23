@@ -73,7 +73,6 @@ ZSH_THEME="simple"
 plugins=(
   git
   fzf
-  zoxide
 )
 
 source $ZSH/oh-my-zsh.sh
