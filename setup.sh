@@ -62,6 +62,11 @@ rustup component add rust-analyzer
 # Go
 brew install go
 
+# SHELL TOOLS
+
+# Install sobriquet (fuzzy finder for shell aliases)
+cargo install sobriquet
+
 # OPS
 
 # Install Docker

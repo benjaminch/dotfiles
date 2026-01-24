@@ -82,6 +82,26 @@ source $ZSH/oh-my-zsh.sh
 # This gives you: z <path>, zi (interactive), za (add), zq (query), zr (remove)
 eval "$(zoxide init zsh --cmd z)"
 
+# sobriquet - fuzzy finder for shell aliases
+sobriquet() {
+  case "$1" in
+    init|generate|config|stats|audit|--help|-h|--version|-V)
+      command sobriquet "$@"
+      return
+      ;;
+  esac
+  local selected
+  selected=$(command sobriquet "$@" 2>/dev/null)
+  local exit_code=$?
+  if [[ $exit_code -eq 0 && -n "$selected" ]]; then
+    print -z "$selected"
+  fi
+  return $exit_code
+}
+
+# Short alias
+alias sq=sobriquet
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"

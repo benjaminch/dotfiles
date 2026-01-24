@@ -25,6 +25,7 @@ Personal dotfiles managed with [dotter](https://github.com/SuperCuber/dotter).
 - `broot` - better `tree`
 - `zoxide` - smarter `cd`
 - `fzf` - fuzzy finder
+- `sobriquet` - fuzzy finder for shell aliases
 
 ### Window Management
 - **Tiling Manager**: [AeroSpace](https://github.com/nikitabobko/AeroSpace)
@@ -59,7 +60,7 @@ This will install:
 - Zellij
 - Atuin
 - AeroSpace & skhd
-- All modern CLI tools
+- All modern CLI tools (including sobriquet)
 - Development tools (Neovim, Rust, Go, etc.)
 
 ### Deploy Dotfiles
