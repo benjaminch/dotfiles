@@ -134,3 +134,12 @@
 	
 	# Cleanup
 	cleanup = "!git branch --merged | grep -v '\\*\\|main\\|master\\|develop' | xargs -n 1 git branch -d"
+[gpg]
+	format = openpgp
+	program = /opt/homebrew/bin/gpg
+[user]
+	signingkey = 78110888037799FE03DFA3BEA78DA39A3F2B6BED
+[commit]
+	gpgsign = true
+[tag]
+	gpgsign = true

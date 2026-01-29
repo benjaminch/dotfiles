@@ -19,3 +19,6 @@ eval "$(rbenv init -)"
 
 # RUST
 . "$HOME/.cargo/env"
+
+# GPG
+export GPG_TTY=$(tty)

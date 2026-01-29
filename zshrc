@@ -85,7 +85,7 @@ eval "$(zoxide init zsh --cmd z)"
 # sobriquet - fuzzy finder for shell aliases
 sobriquet() {
   case "$1" in
-    init|generate|config|stats|audit|--help|-h|--version|-V)
+    init|generate|config|stats|audit|tip|--help|-h|--version|-V)
       command sobriquet "$@"
       return
       ;;
@@ -99,8 +99,27 @@ sobriquet() {
   return $exit_code
 }
 
+# Alias tips - show reminders when you use full commands instead of aliases
+# To enable: set SOBRIQUET_TIPS_ENABLE=1 in your shell config
+_sobriquet_preexec() {
+  if [[ "${SOBRIQUET_TIPS_ENABLE:-0}" == "1" ]]; then
+    local cmd="$1"
+    local tip
+    tip=$(command sobriquet tip "$cmd" 2>/dev/null)
+    if [[ -n "$tip" ]]; then
+      echo "$tip"
+    fi
+  fi
+}
+
+autoload -U add-zsh-hook
+add-zsh-hook preexec _sobriquet_preexec
+
 # Short alias
 alias sq=sobriquet
+
+# Enable alias tips (set to 0 to disable)
+export SOBRIQUET_TIPS_ENABLE=1
 
 # User configuration
 
