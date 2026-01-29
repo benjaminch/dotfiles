@@ -27,6 +27,9 @@ palette = 12=#a6dbff
 palette = 13=#ffcaff
 palette = 14=#8cf8f7
 palette = 15=#eef1f8
+
+# font
+font-family = "GeistMono Nerd Font"
 font-size = 13
 
 shell-integration-features = no-cursor,sudo,no-title
