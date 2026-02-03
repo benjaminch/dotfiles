@@ -1,7 +1,7 @@
 return {
   {
     "zbirenbaum/copilot.lua",
-    enabled = false, -- Disabled due to recent LSP update causing nvim to quit
+    enabled = true,
     opts = {
       suggestion = {
         keymap = {
@@ -14,6 +14,6 @@ return {
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    enabled = false, -- Disabled along with copilot.lua
+    enabled = true,
   },
 }

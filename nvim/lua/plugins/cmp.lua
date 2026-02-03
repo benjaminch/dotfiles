@@ -11,7 +11,6 @@ return {
             fallback()
           end
         end, { "i", "s" }),
-        ["<CR>"] = cmp.mapping.abort(),
       })
     end,
   },
