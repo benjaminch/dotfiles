@@ -5,6 +5,7 @@ depends = []
 
 [default.files]
 aerospace = "~/.aerospace.toml"
+atuin = "~/.config/atuin"
 gitconfig = "~/.gitconfig"
 gitignore_global = "~/.gitignore_global"
 ghostty = "~/.config/ghostty"
