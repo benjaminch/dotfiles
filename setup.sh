@@ -34,6 +34,7 @@ brew install dust    # better du
 brew install fd      # better find
 brew install broot   # better tree
 brew install zoxide  # better cd
+brew install fpp     # Facebook PathPicker
 
 # TEXT EDITOR (required for lazyvim)
 pip install pynvim

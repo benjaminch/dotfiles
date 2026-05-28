@@ -25,6 +25,7 @@ Personal dotfiles managed with [dotter](https://github.com/SuperCuber/dotter).
 - `broot` - better `tree`
 - `zoxide` - smarter `cd`
 - `fzf` - fuzzy finder
+- `fpp` - Facebook PathPicker
 - `sobriquet` - fuzzy finder for shell aliases
 
 ### Window Management

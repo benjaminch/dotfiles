@@ -5,7 +5,6 @@
 custom-shader-animation = true
 
 # theme
-theme = NvimDark
 background = #14161b
 foreground = #e0e2ea
 selection-background = #4f5258
@@ -46,3 +45,5 @@ mouse-hide-while-typing = true
 keybind = alt+left=unbind
 keybind = alt+right=unbind
 macos-option-as-alt = true
+keybind = unconsumed:alt+h=text:\x1bh
+keybind = unconsumed:alt+i=text:\x1bi
