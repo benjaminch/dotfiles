@@ -2,11 +2,11 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
--- For languages that don't support workspace symbols (like Kotlin),
--- use document symbols instead
+-- Prefer workspace-wide symbol search. If the LSP cannot provide that,
+-- fall back to project tags instead of limiting the search to the current file.
 local function search_symbols()
   local clients = vim.lsp.get_active_clients({ bufnr = 0 })
-  
+
   -- Check if any active client supports workspace symbols
   local has_workspace_symbol = false
   for _, client in ipairs(clients) do
@@ -15,10 +15,10 @@ local function search_symbols()
       break
     end
   end
-  
-  -- If workspace symbols not supported, use document symbols
+
+  -- Tags are broader than document symbols and work across mixed file types.
   if not has_workspace_symbol then
-    require("fzf-lua").lsp_document_symbols()
+    require("fzf-lua").tags()
   else
     require("fzf-lua").lsp_live_workspace_symbols()
   end

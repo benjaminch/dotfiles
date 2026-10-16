@@ -6,9 +6,9 @@ return {
 
       opts = opts or {}
 
-      -- Use fd for file finding (respects .gitignore by default)
+      -- Use fd for file finding, including hidden and gitignored files by default.
       opts.files = vim.tbl_deep_extend("force", opts.files or {}, {
-        cmd = "fd --type f --strip-cwd-prefix --hidden -E .git",
+        cmd = "fd --type f --strip-cwd-prefix --hidden --no-ignore -E .git",
         -- Don't follow symlinks
         follow = false,
         -- Disable preview to prevent hanging on large file lists
@@ -21,7 +21,7 @@ return {
 
       -- Use ripgrep for searching
       opts.grep = vim.tbl_deep_extend("force", opts.grep or {}, {
-        rg_opts = "--color=never --no-heading --with-filename --line-number --column --smart-case",
+        rg_opts = "--color=never --no-heading --with-filename --line-number --column --smart-case --hidden --no-ignore --glob '!.git/*'",
       })
 
       -- Configure LSP symbol search to handle servers that don't support workspace symbols
