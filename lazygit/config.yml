@@ -1,5 +1,19 @@
 # If true, exit Lazygit when the user presses escape in a context where there is nothing to cancel/close
 quitOnTopLevelReturn: false
+
+gui:
+  # Tree view reduces path-scanning fatigue when many files share prefixes.
+  showFileTree: true
+  # Side panels become useful when branch/file trees can breathe a bit.
+  sidePanelWidth: 0.3
+  # A vertical split reads more like a two-pane review tool than a stacked TUI.
+  mainPanelSplitMode: vertical
+  # Expand the focused side panel so branch/file trees are easier to inspect.
+  expandFocusedSidePanel: true
+  # Show jump labels for panels so the layout stays discoverable.
+  showPanelJumps: true
+  nerdFontsVersion: "3"
+
 git:
   sign:
     gpg: true
