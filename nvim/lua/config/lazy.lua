@@ -34,6 +34,9 @@ require("lazy").setup({
     version = false, -- always use the latest git commit
     -- version = "*", -- try installing the latest stable version for plugins that support semver
   },
+  -- Plugins are declared here, so package metadata discovery is unnecessary
+  -- and can stall Neovim while rebuilding its cache.
+  pkg = { enabled = false },
   install = { colorscheme = { "tokyonight", "habamax" } },
   checker = { enabled = true }, -- automatically check for plugin updates
   performance = {
@@ -52,4 +55,3 @@ require("lazy").setup({
     },
   },
 })
-
