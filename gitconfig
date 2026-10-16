@@ -18,6 +18,11 @@
 	diff = auto
 	status = auto
 
+[status]
+	aheadBehind = true
+	branch = true
+	showStash = true
+
 [init]
 	defaultBranch = main
 
@@ -60,6 +65,8 @@
 [diff]
 	# Better algorithm for diffs
 	algorithm = histogram
+	# Make old/new file roles easier to read in split diff tools
+	mnemonicPrefix = true
 	# Show submodule changes
 	submodule = log
 	# Detect renames and copies
@@ -139,7 +146,8 @@
 	program = /opt/homebrew/bin/gpg
 [user]
 	signingkey = 78110888037799FE03DFA3BEA78DA39A3F2B6BED
-	name = bchastanier
+	name = benjaminch
+	email = benjamin.chastanier@gmail.com
 [commit]
 	gpgsign = true
 [tag]
