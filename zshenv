@@ -1,6 +1,7 @@
 # FZF
 export FZF_DEFAULT_OPTS="--layout=reverse --info=inline"
-export FZF_DEFAULT_COMMAND='rg --files --hidden --follow --glob "!.git/*"'
+export FZF_DEFAULT_COMMAND='fd --type f --strip-cwd-prefix --hidden --follow --no-ignore -E .git'
+export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # GNU
 # Make all GNU flavor commands available, may override same-name BSD flavor commands
