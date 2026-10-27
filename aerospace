@@ -117,3 +117,5 @@ run = ['move-node-to-workspace 4']
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = ['move-node-to-workspace 5']
+if.app-id = 'com.openai.codex'
+run = ['move-node-to-workspace 5']
