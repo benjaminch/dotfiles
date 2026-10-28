@@ -1,19 +1,19 @@
 return {
   {
     "zbirenbaum/copilot.lua",
-    enabled = true,
+    enabled = false,
+  },
+  {
+    "neovim/nvim-lspconfig",
     opts = {
-      suggestion = {
-        keymap = {
-          accept = "<Tab>",
-          accept_word = false,
-          accept_line = false,
-        },
+      servers = {
+        -- Prevent Mason from starting Copilot independently of the plugins.
+        copilot = { enabled = false },
       },
     },
   },
   {
     "CopilotC-Nvim/CopilotChat.nvim",
-    enabled = true,
+    enabled = false,
   },
 }
